@@ -52,24 +52,22 @@ string longestCommonPrefix(vector<string>& strs)
             }
         }
 
-    return "";
+    string resultString;
+    for (int i = 0; i < resultVec.size(); i++)
+    {
+        resultString += resultVec[i];
+    }
+    return resultString.empty() ? "" : resultString;
 }
 
 int main(int argc, const char * argv[])
 {
     vector<string> vv;
-    vv.push_back("bcccc");
-//    vv.push_back("abrr");
-//    vv.push_back("abwee");
-
+    vv.push_back("c");
+    vv.push_back("c");
 
     string ss = longestCommonPrefix(vv);
     cout << ss;
 
-
-
     return 0;
 }
-
-
-
