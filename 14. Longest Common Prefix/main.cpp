@@ -19,6 +19,11 @@ string longestCommonPrefix(vector<string>& strs)
         return "";
     }
 
+    if (strs.size() == 1)
+    {
+        return strs[0];
+    }
+
     string firstStr = strs[0];
     vector<char> vectorFirstStr;
     for (int i = 0; i < firstStr.length(); i++)
@@ -54,8 +59,8 @@ int main(int argc, const char * argv[])
 {
     vector<string> vv;
     vv.push_back("bcccc");
-    vv.push_back("abrr");
-    vv.push_back("abwee");
+//    vv.push_back("abrr");
+//    vv.push_back("abwee");
 
 
     string ss = longestCommonPrefix(vv);
